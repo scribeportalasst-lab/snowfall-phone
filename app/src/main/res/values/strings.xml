@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a11y_description">Only tells Snowfall which app is open, so the snow can hide inside apps and return the instant you reach the home screen. It cannot read your screen or what you type.</string>
+</resources>
