@@ -19,7 +19,7 @@
 
     <application
         android:allowBackup="false"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
         android:label="Snowfall"
         android:theme="@android:style/Theme.Material.NoActionBar">
 
@@ -39,6 +39,19 @@
             <property
                 android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
                 android:value="Decorative snow overlay shown on the home screen" />
+        </service>
+
+        <service
+            android:name=".HomeWatcherService"
+            android:exported="true"
+            android:label="Snowfall home screen detection"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service" />
         </service>
     </application>
 </manifest>
